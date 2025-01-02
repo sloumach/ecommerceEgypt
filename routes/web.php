@@ -1,11 +1,15 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [HomeController::class, 'create'])->name('home');
+Route::get('/products', [HomeController::class, 'products'])->name('products');
+Route::get('/about-us', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/contact-us', [HomeController::class, 'contactus'])->name('contactus');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
