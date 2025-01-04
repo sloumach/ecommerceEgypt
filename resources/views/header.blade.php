@@ -57,7 +57,7 @@
             <p class="price_cart_total">$0</p>
         </div>
         <div class="button_cart">
-            <a href="checkout.html" class="btn_cart">proceed to checkout</a>
+            <a href="{{ route('checkout') }}" class="btn_cart">proceed to checkout</a>
             <button onclick="close_cart()" class="btn_cart trans_bg">shop more</button>
         </div>
     </div>

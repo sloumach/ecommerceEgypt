@@ -10,6 +10,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/products', 'products')->name('products');
     Route::get('/about-us', 'aboutus')->name('aboutus');
     Route::get('/contact-us', 'contactus')->name('contactus');
+    Route::get('/checkout', 'checkout')->name('checkout');
 });
 
 
