@@ -19,11 +19,13 @@
     <section class="sign sec_form">
         <div class="form_container">
           <p class="title">welcom back</p>
-          <form action="" class="form">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="password">
-            <input type="password" placeholder="password">
+          <form method="POST" action="{{ route('register') }}" class="form">
+            @csrf
+            <input type="text" placeholder="Name" name="name">
+            <input type="email" placeholder="Email" name="email">
+            <input type="password" placeholder="password" name="password"
+            required>
+            <input type="password" placeholder="confirm password" name="password_confirmation" required>
 
             <button class="form-btn">sign up </button>
 

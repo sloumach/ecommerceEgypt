@@ -21,9 +21,10 @@
     <section class="sign sec_form">
         <div class="form_container">
           <p class="title">welcom back</p>
-          <form action="" class="form">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="password">
+          <form method="POST" action="{{ route('login') }}" class="form">
+            @csrf
+            <input name="email" type="email" placeholder="email">
+            <input name="password" type="password" placeholder="password">
             <p class="page-link">
               <a href="#" class="page-link-label">Forgot Password?</a>
             </p>
